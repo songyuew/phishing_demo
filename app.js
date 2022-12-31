@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === 'development') {
 
 app.use(express.json())
 
-app.use(express.static("../frontend/"));
+app.use(express.static("./public"));
 
 app.use((req, res, next) => {
     req.body.timestamp = new Date().toISOString();
